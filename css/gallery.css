@@ -1,0 +1,52 @@
+/* Stiluri generale pentru containerul galeriei */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Coloanele se ajustează la lățimea disponibilă, cu minim 150px */
+    grid-gap: 20px; /* Spațierea între elemente */
+    padding: 20px; /* Spațiu interior pentru a nu se atinge de marginile paginii */
+    justify-items: center; /* Centrează imaginile în celulele gridului */
+}
+
+/* Stiluri pentru fiecare item din galerie */
+.image-item {
+    position: relative;
+    overflow: hidden; /* Ascunde orice depășește dimensiunile stabilite */
+    border-radius: 8px; /* Rotunjește colțurile containerelor de imagini */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adaugă o umbră ușoară pentru efect de elevație */
+    transition: transform 0.3s; /* Animatie pentru efectul de hover */
+}
+
+.image-item:hover {
+    transform: scale(1.05); /* Mărește ușor imaginea când este hover */
+}
+
+/* Stiluri pentru imaginile din interiorul item-urilor */
+.image-item img {
+    width: 100%; /* Forțează imaginile să ocupe întreaga lățime a containerului lor */
+    height: 100%; /* Înălțime fixă pentru toate imaginile */
+    object-fit: cover; /* Asigură că partea din imagine ce nu încapă este tăiată */
+    border-radius: 8px; /* Rotunjește colțurile imaginilor */
+}
+
+/* Stiluri pentru overlay-ul textului */
+.image-overlay {
+    position: absolute;
+    bottom: 0; /* Poziționează overlay-ul la baza imaginii */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Fundal semi-transparent negru pentru text */
+    color: white; /* Textul overlay-ului este alb */
+    padding: 10px; /* Spațiu în jurul textului */
+    text-align: center; /* Centrează textul */
+    transition: opacity 0.3s; /* Animatie pentru apariția overlay-ului */
+    opacity: 0; /* Inițial, overlay-ul este invizibil */
+}
+
+.image-item:hover .image-overlay {
+    opacity: 1; /* Face overlay-ul vizibil când imaginea este hover */
+}
+
+.image-overlay h3 {
+    margin: 0; /* Elimină marginile default pentru h3 */
+    font-size: 16px; /* Dimensiune specifică pentru titlul din overlay */
+}

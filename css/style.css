@@ -1,0 +1,361 @@
+/* Stiluri pentru elementul body */
+body {
+  background-color: rgb(12, 101, 146); /* Setează culoarea de fundal */
+  font-family: Arial, sans-serif; /* Setează fontul principal al paginii */
+  margin: 0; /* Elimină marginile implicite */
+  padding: 0; /* Elimină paddingul implicit */
+  background-attachment: fixed; /* Fixează fundalul astfel încât să nu se deruleze */
+  opacity: 0.9; /* Setează opacitatea fundalului */
+  color: #333; /* Setează culoarea textului */
+}
+
+/* Stiluri pentru header */
+header {
+  background-color: rgba(255, 255, 255, 0.9); /* Setează culoarea de fundal cu opacitate */
+  padding: 20px; /* Adaugă padding de 20px */
+  text-align: center; /* Centrează textul */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adaugă o umbră */
+}
+
+/* Stiluri pentru imaginea din header */
+header img {
+  display: block; /* Afișează imaginea ca bloc */
+  margin-left: auto; /* Centrează imaginea pe orizontală */
+  margin-right: auto; /* Centrează imaginea pe orizontală */
+  max-height: 300px; /* Setează înălțimea maximă */
+  height: auto; /* Menține proporțiile înălțimii */
+  width: auto; /* Menține proporțiile lățimii */
+}
+
+/* Stiluri pentru titlurile din header */
+header h1, header h2 {
+  color: rgb(12, 101, 146); /* Setează culoarea textului */
+  font-weight: bold; /* Setează greutatea fontului */
+}
+
+/* Stiluri pentru navigarea principală */
+nav.main-nav {
+  display: flex; /* Utilizează Flexbox pentru alinierea elementelor */
+  justify-content: center; /* Centrează elementele pe orizontală */
+  background-color: #34495e; /* Setează culoarea de fundal */
+  padding: 10px; /* Adaugă padding de 10px */
+  border-radius: 8px; /* Rotunjește colțurile */
+  margin: 10px auto; /* Adaugă margin și centrează pe orizontală */
+  position: relative; /* Setează poziționarea relativă */
+  width: fit-content; /* Setează lățimea în funcție de conținut */
+}
+
+/* Stiluri pentru navigarea de autentificare */
+nav.auth-nav {
+  display: flex; /* Utilizează Flexbox pentru alinierea elementelor */
+  justify-content: flex-end; /* Aliniază elementele la dreapta */
+  background-color: transparent; /* Setează culoarea de fundal transparentă */
+  position: absolute; /* Setează poziționarea absolută */
+  right: 10px; /* Setează distanța față de dreapta */
+  top: 10px; /* Setează distanța față de partea de sus */
+}
+
+/* Stiluri pentru linkurile din navigare */
+nav.main-nav a, nav.auth-nav a {
+  line-height: 50px; /* Setează înălțimea liniei */
+  height: 50px; /* Setează înălțimea */
+  font-size: 15px; /* Setează dimensiunea fontului */
+  display: inline-block; /* Afișează ca bloc în linie */
+  margin: 0 10px; /* Adaugă margin lateral */
+  text-decoration: none; /* Elimină sublinierea textului */
+  text-transform: uppercase; /* Transformă textul în majuscule */
+  text-align: center; /* Centrează textul */
+  color: white; /* Setează culoarea textului */
+  cursor: pointer; /* Setează cursorul la pointer */
+  transition: background-color 0.3s ease; /* Adaugă tranziție la schimbarea culorii de fundal */
+}
+
+/* Stiluri specifice pentru linkurile din navigarea de autentificare */
+nav.auth-nav a {
+  background-color: #f0f0f0; /* Setează culoarea de fundal */
+  color: #333; /* Setează culoarea textului */
+  padding: 5px 10px; /* Adaugă padding */
+  border-radius: 4px; /* Rotunjește colțurile */
+}
+
+/* Stiluri pentru hover pe linkurile din navigare */
+nav.main-nav a:hover, nav.auth-nav a:hover {
+  background-color: #1abc9c; /* Schimbă culoarea de fundal la hover */
+  border-radius: 4px; /* Rotunjește colțurile */
+}
+
+/* Stiluri pentru animația din navigare */
+nav.main-nav .animation {
+  position: absolute; /* Setează poziționarea absolută */
+  height: 50px; /* Setează înălțimea */
+  bottom: 0; /* Aliniază la partea de jos */
+  z-index: 0; /* Setează indexul de stivuire */
+  transition: all .5s ease 0s; /* Adaugă tranziție la toate proprietățile */
+  border-radius: 8px; /* Rotunjește colțurile */
+}
+
+/* Stiluri pentru fiecare link din navigarea principală */
+nav.main-nav a:nth-child(1) { width: 100px; }
+nav.main-nav a:nth-child(2) { width: 100px; }
+nav.main-nav a:nth-child(3) { width: 100px; }
+nav.main-nav a:nth-child(4) { width: 100px; }
+nav.main-nav a:nth-child(5) { width: 100px; }
+
+/* Stiluri pentru linkurile din navigarea de autentificare */
+.auth-nav a:nth-child(1) { width: 100px; }
+.auth-nav a:nth-child(2) { width: 100px; }
+
+/* Stiluri pentru animația de hover pe linkurile din navigarea principală */
+/*nav.main-nav .start-home, nav.main-nav a:nth-child(1):hover ~ .animation { width: 100px; left: 20px; background-color: #1abc9c; }
+nav.main-nav .start-sections, nav.main-nav a:nth-child(2):hover ~ .animation { width: 100px; left: 140px; background-color: #e74c3c; }
+nav.main-nav .start-teams, nav.main-nav a:nth-child(3):hover ~ .animation { width: 100px; left: 260px; background-color: #3498db; }
+nav.main-nav .start-announcements, nav.main-nav a:nth-child(4):hover ~ .animation { width: 100px; left: 380px; background-color: #9b59b6; }
+nav.main-nav .start-gallery, nav.main-nav a:nth-child(5):hover ~ .animation { width: 100px; left: 500px; background-color: #59b661; }
+
+/* Stiluri pentru animația de hover pe linkurile din navigarea de autentificare */
+nav.auth-nav .start-login, nav.auth-nav a:nth-child(1):hover ~ .animation { width: 100px; left: 0; background-color: #1abc4b; }
+nav.auth-nav .start-register, nav.auth-nav a:nth-child(2):hover ~ .animation { width: 100px; left: 100px; background-color: #abe73c; }
+
+/* Stiluri pentru elementul main */
+main {
+  padding: 20px; /* Adaugă padding de 20px */
+  background-color: #fff; /* Setează culoarea de fundal */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adaugă o umbră */
+  margin: 20px auto; /* Adaugă margin și centrează pe orizontală */
+  max-width: 800px; /* Setează lățimea maximă */
+  border-radius: 8px; /* Rotunjește colțurile */
+}
+
+/* Stiluri pentru secțiunea info */
+.info-section {
+  margin-bottom: 20px; /* Adaugă margin în partea de jos */
+}
+
+.info-section h2 {
+  color: rgb(12, 101, 146); /* Setează culoarea textului */
+  margin-bottom: 10px; /* Adaugă margin în partea de jos */
+}
+
+.info-section p {
+  color: #555; /* Setează culoarea textului */
+  margin-bottom: 10px; /* Adaugă margin în partea de jos */
+}
+
+/* Stiluri pentru linkurile din secțiunea info */
+.info-section a {
+  color: #007bff; /* Setează culoarea textului */
+  text-decoration: none; /* Elimină sublinierea textului */
+}
+
+.info-section a:hover {
+  text-decoration: underline; /* Adaugă subliniere la hover */
+}
+
+/* Stiluri pentru buton */
+.button {
+  background-color: rgb(146, 101, 12); /* Setează culoarea de fundal */
+  color: white; /* Setează culoarea textului */
+  padding: 10px 20px; /* Adaugă padding */
+  text-decoration: none; /* Elimină sublinierea textului */
+  border: none; /* Elimină bordura */
+  border-radius: 5px; /* Rotunjește colțurile */
+  display: inline-block; /* Afișează ca bloc în linie */
+  margin-top: 10px; /* Adaugă margin în partea de sus */
+  transition: background-color 0.3s ease; /* Adaugă tranziție la schimbarea culorii de fundal */
+}
+
+.button:hover {
+  background-color: rgb(3, 102, 38); /* Schimbă culoarea de fundal la hover */
+}
+
+/* Stiluri pentru footer */
+footer {
+  background-color: rgb(12, 101, 146); /* Setează culoarea de fundal */
+  color: white; /* Setează culoarea textului */
+  padding: 10px; /* Adaugă padding de 10px */
+  text-align: center; /* Centrează textul */
+}
+
+/* Stiluri pentru containerul de imagini din galerie */
+.image-container {
+  display: grid; /* Utilizează Grid Layout pentru alinierea elementelor */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Setează coloanele grilei */
+  grid-gap: 20px; /* Adaugă spațiu între elementele grilei */
+}
+
+/* Stiluri pentru elementele de imagine */
+.image-item {
+  position: relative; /* Setează poziționarea relativă */
+  overflow: hidden; /* Ascunde conținutul care depășește containerul */
+  border-radius: 8px; /* Rotunjește colțurile */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adaugă o umbră */
+  transition: transform 0.3s ease; /* Adaugă tranziție la transformare */
+}
+
+.image-item:hover {
+  transform: translateY(-5px); /* Schimbă poziția la hover */
+}
+
+/* Stiluri pentru imagine */
+.image-item img {
+  width: 100%; /* Setează lățimea la 100% */
+  height: auto; /* Menține proporțiile înălțimii */
+  border-radius: 8px; /* Rotunjește colțurile */
+}
+
+/* Stiluri pentru suprapunerea imaginii */
+.image-overlay {
+  position: absolute; /* Setează poziționarea absolută */
+  top: 0; /* Aliniază la partea de sus */
+  left: 0; /* Aliniază la partea stângă */
+  width: 100%; /* Setează lățimea la 100% */
+  height: 100%; /* Setează înălțimea la 100% */
+  background-color: rgba(0, 0, 0, 0.6); /* Setează culoarea de fundal cu opacitate */
+  color: white; /* Setează culoarea textului */
+  display: flex; /* Utilizează Flexbox pentru alinierea elementelor */
+  justify-content: center; /* Centrează elementele pe orizontală */
+  align-items: center; /* Centrează elementele pe verticală */
+  opacity: 0; /* Setează opacitatea la 0 */
+  transition: opacity 0.3s ease; /* Adaugă tranziție la schimbarea opacității */
+}
+
+.image-item:hover .image-overlay {
+  opacity: 1; /* Schimbă opacitatea la hover */
+}
+
+/* Stiluri pentru titlul suprapunerii imaginii */
+.image-overlay h3 {
+  margin: 0; /* Elimină marginile */
+  font-size: 20px; /* Setează dimensiunea fontului */
+  text-align: center; /* Centrează textul */
+}
+
+/* Stiluri pentru secțiunea about */
+#about {
+  margin-top: 20px; /* Adaugă margin în partea de sus */
+}
+
+#about h3 {
+  color: rgb(12, 101, 146); /* Setează culoarea textului */
+  margin-top: 20px; /* Adaugă margin în partea de sus */
+}
+
+#about p {
+  color: #555; /* Setează culoarea textului */
+  margin-bottom: 10px; /* Adaugă margin în partea de jos */
+}
+
+/* Stiluri pentru tabel */
+table {
+  width: 100%; /* Setează lățimea la 100% */
+  table-layout: fixed; /* Setează layout-ul tabelului */
+  border-spacing: 20px; /* Setează spațierea celulelor */
+}
+
+td {
+  width: 50%; /* Setează lățimea celulei */
+  vertical-align: top; /* Aliniază conținutul la partea de sus */
+}
+
+/* Stiluri pentru imaginile din tabel */
+.table-image {
+  max-width: auto; /* Setează lățimea maximă */
+  height: auto; /* Menține proporțiile înălțimii */
+  display: block; /* Afișează ca bloc */
+}
+
+/* Stiluri pentru containerul de flip */
+.flip-container {
+  perspective: 1000px; /* Setează perspectiva */
+  overflow: hidden; /* Ascunde conținutul care depășește containerul */
+}
+
+.flipper {
+  transition: 2s; /* Setează tranziția */
+  transform-style: preserve-3d; /* Setează stilul transformării */
+  position: relative; /* Setează poziționarea relativă */
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg); /* Rotire la hover */
+}
+
+.flip-container, .flipper {
+  height: 250px; /* Setează înălțimea */
+  width: 100%; /* Setează lățimea */
+}
+
+/* Stiluri pentru fața și spatele flipului */
+.front, .back {
+  backface-visibility: hidden; /* Ascunde partea din spate */
+  position: absolute; /* Setează poziționarea absolută */
+  top: 0; /* Aliniază la partea de sus */
+  width: 100%; /* Setează lățimea la 100% */
+  height: 100%; /* Setează înălțimea la 100% */
+  background-size: cover; /* Setează mărimea de fundal */
+}
+
+.front {
+  z-index: 2; /* Setează indexul de stivuire */
+  transform: rotateY(0deg); /* Rotire inițială */
+  background-position: center; /* Centrează fundalul */
+  left: 0; /* Aliniază la partea stângă */
+}
+
+.back {
+  transform: rotateY(180deg); /* Rotire la 180 de grade */
+  background-color: #f7f7f7; /* Setează culoarea de fundal */
+  padding: 20px; /* Adaugă padding */
+  box-sizing: border-box; /* Include padding și border în dimensiunile totale */
+  left: 0; /* Aliniază la partea stângă */
+}
+
+.front h2 {
+  font-size: 18px; /* Setează dimensiunea fontului */
+  text-align: center; /* Centrează textul */
+  color: white; /* Setează culoarea textului */
+  position: absolute; /* Setează poziționarea absolută */
+  top: 50%; /* Centrează pe verticală */
+  left: 50%; /* Centrează pe orizontală */
+  width: 100%; /* Setează lățimea la 100% */
+  margin: 0; /* Elimină marginile */
+  transform: translate(-50%, -50%); /* Centrează absolut */
+}
+
+.back p {
+  font-size: 14px; /* Setează dimensiunea fontului */
+}
+
+/* Stiluri pentru titlul general */
+h2 {
+  font-size: 24px; /* Setează dimensiunea fontului */
+  text-align: center; /* Centrează textul */
+  padding-top: 100px; /* Adaugă padding în partea de sus */
+  color: white; /* Setează culoarea textului */
+}
+
+/* Stiluri pentru lista de activități din pagina teams.php */
+.activities-list {
+  font-size: 12px; /* Ajustează dimensiunea fontului după cum este necesar */
+  color: #333; /* Setează culoarea textului */
+}
+
+.activities-list li {
+  margin-bottom: 5px; /* Adaugă un spațiu între elementele listei */
+}
+
+/* Stiluri pentru inputurile și textarea din formulare */
+form input[type="text"], form textarea {
+  width: 100%; /* Setează lățimea la 100% */
+  padding: 15px; /* Adaugă padding */
+  margin-bottom: 20px; /* Adaugă margin în partea de jos */
+  border: 1px solid #ccc; /* Setează o bordură de 1px solid */
+  border-radius: 4px; /* Rotunjește colțurile */
+  box-sizing: border-box; /* Include padding și border în dimensiunile totale */
+  font-size: 16px; /* Setează dimensiunea fontului */
+}
+
+form textarea {
+  height: 200px; /* Setează înălțimea */
+  resize: vertical; /* Permite redimensionarea verticală */
+}

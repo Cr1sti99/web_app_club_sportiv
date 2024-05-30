@@ -1,0 +1,75 @@
+/* Stiluri pentru elementul body */
+body {
+    font-family: Arial, sans-serif; /* Setează fontul principal al paginii */
+    background-color: rgb(12, 101, 146); /* Setează culoarea de fundal */
+    margin: 0; /* Elimină marginile implicite */
+    padding: 0; /* Elimină paddingul implicit */
+    background-attachment: fixed; /* Fixează fundalul astfel încât să nu se deruleze */
+    opacity: 0.8; /* Setează opacitatea fundalului */
+}
+
+/* Stiluri pentru containerul principal al înregistrării */
+.register-main {
+    display: flex; /* Utilizează Flexbox pentru alinierea elementelor */
+    justify-content: center; /* Centrează elementele pe orizontală */
+    align-items: center; /* Centrează elementele pe verticală */
+    min-height: 100vh; /* Setează înălțimea minimă la 100% din înălțimea viewport-ului */
+    padding: 20px; /* Adaugă padding de 20px */
+}
+
+/* Stiluri pentru wrapper-ul formularului */
+.form-wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* Setează culoarea de fundal cu opacitate */
+    padding: 20px; /* Adaugă padding de 20px */
+    border-radius: 8px; /* Rotunjește colțurile */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adaugă o umbră */
+    max-width: 400px; /* Setează lățimea maximă */
+    width: 100%; /* Setează lățimea la 100% */
+}
+
+/* Stiluri pentru titlul formularului */
+.form-wrapper h2 {
+    margin-top: 0; /* Elimină marginile de sus */
+    color: red; /* Setează culoarea textului la roșu */
+}
+
+/* Stiluri pentru grupurile de formulare */
+.form-group {
+    margin-bottom: 15px; /* Adaugă margin de 15px în partea de jos */
+}
+
+/* Stiluri pentru etichetele grupurilor de formulare */
+.form-group label {
+    display: block; /* Setează afișarea pe bloc */
+    margin-bottom: 5px; /* Adaugă margin de 5px în partea de jos */
+    color: #333; /* Setează culoarea textului */
+}
+
+/* Stiluri pentru inputurile grupurilor de formulare */
+.form-group input {
+    width: 100%; /* Setează lățimea la 100% */
+    padding: 10px; /* Adaugă padding de 10px */
+    border: 1px solid #ccc; /* Setează o bordură de 1px solid */
+    border-radius: 4px; /* Rotunjește colțurile */
+    box-sizing: border-box; /* Include padding și border în dimensiunile totale */
+}
+
+/* Stiluri pentru butonul de submit */
+.form-group input[type="submit"] {
+    background-color: rgb(146, 101, 12); /* Setează culoarea de fundal */
+    color: white; /* Setează culoarea textului */
+    border: none; /* Elimină bordura */
+    cursor: pointer; /* Setează cursorul la pointer */
+    margin-top: 10px; /* Adaugă margin de 10px în partea de sus */
+}
+
+/* Stiluri pentru butonul de submit la hover */
+.form-group input[type="submit"]:hover {
+    background-color: rgb(3, 102, 38); /* Setează o culoare de fundal diferită la hover */
+}
+
+/* Stiluri pentru mesajele de eroare */
+.error {
+    color: red; /* Setează culoarea textului la roșu */
+    margin-bottom: 15px; /* Adaugă margin de 15px în partea de jos */
+}
